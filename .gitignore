@@ -1,3 +1,15 @@
+# Confidential Dataset
+/data
+
+# Backup Files
+/backup
+
+# Only useful for local development
+script/collect_tweets.sh
+.virtual_documents
+
+# ---------------------------
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -127,6 +139,3 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
-
-# Confidential Dataset
-/dataset
