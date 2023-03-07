@@ -1,8 +1,9 @@
 # Confidential Dataset
-/data
+data/*
+!data/slang.json
 
 # Backup Files
-/backup
+backup/
 
 # Only useful for local development
 script/collect_tweets.sh
