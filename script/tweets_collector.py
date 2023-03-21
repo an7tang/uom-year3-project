@@ -8,7 +8,7 @@ load_dotenv()
 
 
 # ------------ Helper function for timestamp ------------
-def today(backward_days: int):
+def today(backward_days):
     d = datetime.utcnow() - timedelta(days=backward_days)
     date = datetime(year=d.year, month=d.month, day=d.day, hour=0, minute=0, second=0)
     return date
@@ -20,7 +20,8 @@ def file_timestamp(datetime):
 # ------------ Class TweetsCollector ------------
 class TweetsCollector:
 
-    bearer_token = os.getenv('TWITTER_BEARER_TOKEN')
+    # bearer_token = os.getenv('TWITTER_BEARER_TOKEN')
+    bearer_token = os.getenv('TWITTER_BEARER_TOKEN_2')
     tweet_fields = ['created_at']
 
     def __init__(self):
@@ -50,18 +51,18 @@ class TweetsCollector:
         new_list = []
         for index, tweet in enumerate(tweets_list):
             content = tweet['content']
-            usernames = re.findall(pattern_username, content)
             
             # print(f"{index}: {content}", end="\r")
             try:
+                usernames = re.findall(pattern_username, content)
                 for i, name in enumerate(usernames):
                     alias = f'USERNAME_{(i+1):02}'
-                    content = re.sub(name, alias, content)
+                    content = re.sub(re.escape(name), alias, content)
                 
                 urls = re.findall(pattern_url, content)
                 for i, url in enumerate(urls):
                     alias = f'URL_{(i+1):02}'
-                    content = re.sub(url, alias, content)
+                    content = re.sub(re.escape(url), alias, content)
             except Exception as e:
                 print(f"Error occurs in: index [{index}] :\n{content}", end="\r")
                 raise
