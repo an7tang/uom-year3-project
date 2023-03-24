@@ -8,6 +8,8 @@ backup/
 # Only useful for local development
 script/collect_tweets.sh
 .virtual_documents
+p11333at_submission.zip
+zip_submission.sh
 
 # ---------------------------
 

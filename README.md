@@ -20,7 +20,7 @@
 > This project is divided into two parts: *sentiment analysis* and *topic modelling*, aiming to analyse the sentiment of tweets discussing COVID-19 and to extract most commonly discussed COVID-19 related topics. 
 
 #### Objectives
-![Project Objective Graph](./assets/images/project_objective.png)
+![Project Objective Graph](./project_objective.png)
 
 ### Table of Content
 - [Third Year Project](#third-year-project)
@@ -79,7 +79,7 @@ Techniquely, I **fine-tuned a pre-trained *BERT* model** (e.g. "distilbert-base-
 
 ### File List
 
-`src/sentiment_analyser.ipynb` ![](https://img.shields.io/badge/-important-orange) 
+`src/sentiment_analyser.ipynb` ![](https://img.shields.io/badge/-Main%20File-orange) 
 : This is the **main** notebook for sentiment analysis task. It includes model functions of fine-tuning (training), evaluation, prediction, and so on.
 : The detailed instruction is inside the notebook.
 
@@ -95,7 +95,7 @@ Techniquely, I implemented a topic modelling model using *BERTopic*. To optimise
 Additionaly, *Gensim's LDA model* was also implemented to compare the performance.
 
 ### File List
-`src/topic_modelling.ipynb` ![](https://img.shields.io/badge/-important-orange)
+`src/topic_modelling.ipynb` ![](https://img.shields.io/badge/-Main%20File-orange)
 : This is the **main** notebook for topic modelling task. It includes the implementation to create clusters of topics.
 : The detailed instruction is inside the notebook.
 
