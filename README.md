@@ -58,7 +58,7 @@ All data were collected and stored on **DataScience Server** belonging to the Un
 
 ### Training Data
 
-The labels of training data were manually annotated by the author, Anqi Tang, as the golden standard. *ChatGPT*, *VADER* and *TextBlob* were also applied to annotate the training data, which were used as the baseline for comparison.
+The labels of training data were manually annotated by the author, Anqi Tang, as the golden standard. *OpenAI (chatGPT)*, *VADER* and *TextBlob* were also applied to annotate the training data, which were used as the baseline for comparison.
 
 ### File List
 
