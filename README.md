@@ -89,7 +89,7 @@ Techniquely, I **fine-tuned a pre-trained *BERT* model** (e.g. "distilbert-base-
 
 In the second part, I implemented topic modelling to extract the most commonly discussed topics related to COVID-19 on Twitter.
 
-Techniquely, I implemented a topic modelling model using *BERTopic*. To optimise the model performance, I customised the ***BERTopic* model** by using a **transformer embedding** model, a ***UMAP* dimensionality reduction** layer, a ***HDBSCAN* clustering** layer, a **tokenisation, lemmatisation and vetorisationand** layer, and a **c-TF-IDF cluster tagging** layer.
+Techniquely, I implemented a topic modelling model using *BERTopic*. To optimise the model performance, I customised the ***BERTopic* model** by using a **transformer embedding** model, a ***UMAP* dimensionality reduction** layer, a ***HDBSCAN* clustering** layer, a **tokenisation, lemmatisation and vetorisationand** layer, and a ***c-TF-IDF* transformer** layer.
 
 Additionaly, *Gensim's LDA model* was also implemented to compare the performance.
 
