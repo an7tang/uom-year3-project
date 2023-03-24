@@ -1,8 +1,6 @@
 # Third Year Project
 
 
----
-
 ## General Information
 
 ### Author Information:
@@ -46,8 +44,6 @@
     - [File List](#file-list-2)
 
 
----
-
 ## Data Preparation
 
 ### Data Source
@@ -66,13 +62,12 @@ The labels of training data were manually annotated by the author, Anqi Tang, as
 
 ### File List
 
-`tweets_collector.ipynb`
+`util/tweets_collector.ipynb`
 : This is the notebook for collecting tweets from Twitter.
 
-`sentiment_annotator.ipynb`
+`util/sentiment_annotator.ipynb`
 : This is the notebook for annotating the sentiment of tweets, using *ChatGPT*, *VADER* and *TextBlob*.
 
----
 
 ## First Part - Sentiment Analysis
 
@@ -82,15 +77,12 @@ In the first part of the project, I trained a model to predict whether a given t
 
 Techniquely, I **fine-tuned a pre-trained *BERT* model** (e.g. "distilbert-base-uncased" provided by Hugging Face) through adding one extra sequential layer on top of the *BERT* model using *PyTorch*. To improve the accuracy of prediction further, I **implemented ensemble learning**, *Bootstrap Aggregating (Bagging) algorithm*, to combine multiple models as an ensemble to make the "[Majority Voting](https://en.wikipedia.org/wiki/Majority_rule)" prediction.
 
-
 ### File List
 
-`sentiment_analyser.ipynb` ![](https://img.shields.io/badge/-important-orange) 
+`src/sentiment_analyser.ipynb` ![](https://img.shields.io/badge/-important-orange) 
 : This is the **main** notebook for sentiment analysis task. It includes model functions of fine-tuning (training), evaluation, prediction, and so on.
 : The detailed instruction is inside the notebook.
 
-
----
 
 ## Second Part - Topic Modelling
 
@@ -103,9 +95,9 @@ Techniquely, I implemented a topic modelling model using *BERTopic*. To optimise
 Additionaly, *Gensim's LDA model* was also implemented to compare the performance.
 
 ### File List
-`topic_modelling.ipynb` ![](https://img.shields.io/badge/-important-orange)
+`src/topic_modelling.ipynb` ![](https://img.shields.io/badge/-important-orange)
 : This is the **main** notebook for topic modelling task. It includes the implementation to create clusters of topics.
 : The detailed instruction is inside the notebook.
 
-`gensim_topic_modelling.ipynb`
-: This is the notebook for topic modelling using *Gensim's LDA model*, which was used for comparison.
+`src/gensim_topic_modelling.ipynb`
+: This is the notebook for topic modelling using *Gensim's LDA model*, which may be used for comparison later.
